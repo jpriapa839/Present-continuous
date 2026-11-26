@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Present Continuous Challenge – Sir George</title>
+<style>
+:root{--bg:#E6F6F8;--card:#FFF4DF;--ink:#153B46;--co:#FF805C;--li:#C4DC79;--sky:#8FD3F4;--gold:#F2C14E}
+*{box-sizing:border-box;margin:0}html,body{height:100%}
+body{background:var(--bg) radial-gradient(rgba(21,59,70,.10) 2px,transparent 2px) 0 0/28px 28px;color:var(--ink);font:600 clamp(15px,1.9vw,26px)/1.35 "Trebuchet MS",system-ui,sans-serif;display:flex;flex-direction:column;overflow:hidden;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+header{display:flex;align-items:center;gap:1vw;padding:.5vh 1.5vw;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.12)}
+.logo{color:#B8860B;letter-spacing:.15em;font-size:.8em;white-space:nowrap}
+#pb{flex:1;height:8px;background:rgba(21,59,70,.15);border-radius:9px;overflow:hidden}#pb i{display:block;height:100%;width:0;background:var(--co);transition:.4s}
+#st{flex:1;overflow:auto;position:relative}
+.slide{display:none;padding:1.5vh 3vw;min-height:100%}.slide.on{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5vh;animation:in .4s}
+@keyframes in{from{opacity:0;transform:translateY(20px)}}
+h1{font-size:2.1em;color:var(--ink);text-align:center;line-height:1.1}h2{font-size:1.2em;margin-bottom:.5em}h2 small{font-weight:600;opacity:.7;margin-left:.6em}
+.card{background:var(--card);color:var(--ink);border-radius:22px;padding:1.8vh 2vw;border:3px solid #F1DDB0;box-shadow:0 6px 0 rgba(21,59,70,.15);width:min(100%,1100px)}
+.card.hot{background:#FFD9CC}.two{display:grid;grid-template-columns:1fr 1fr;gap:2vw;width:min(100%,1100px)}.two .card{width:auto}
+.big{font-size:1.35em;margin:.4em 0}.f{font-size:1.3em;font-weight:900;color:var(--co);margin:.2em 0}u{text-decoration:none;color:var(--co);font-weight:900}
+.b{border:0;border-radius:14px;padding:.45em 1em;font:inherit;font-weight:800;background:var(--co);color:#fff;cursor:pointer;box-shadow:0 4px 0 rgba(0,0,0,.25);margin:.15em}.b:active{transform:translateY(3px)}.b.l{background:var(--li);color:var(--ink)}.b.s{background:var(--sky);color:var(--ink)}.b:disabled{opacity:.6}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1vw;margin:.5em 0}.o{font-size:1.15em}.good{background:#5CB85C!important;color:#fff!important}.bad{background:#C0392B!important}
+.fb,.g,.x{font-style:normal;display:block;margin:.3em 0;min-height:1.2em}.g{color:#2E7D32}.x{color:#C0392B}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:.4em;padding:.5em 0;border-bottom:2px dashed #E3D3B0}.row>span{flex:1 1 100%}.row .fb{flex:1 1 100%}
+input{font:inherit;border:3px solid var(--co);border-radius:10px;padding:.15em .4em;width:7em;color:var(--ink);background:#fff}input.w{width:min(100%,22em)}
+.bt,.pl{flex:1 1 100%;min-height:2.2em}.bt{border:3px dashed var(--li);border-radius:12px;padding:.2em;background:#fff}
+.wrap{position:relative;width:min(40vh,300px);margin:0 auto}.wheel{width:100%;aspect-ratio:1;border-radius:50%;border:6px solid var(--ink);background:conic-gradient(#FF805C 0 30deg,#C4DC79 0 60deg,#8FD3F4 0 90deg,#F2C14E 0 120deg,#FF805C 0 150deg,#C4DC79 0 180deg,#8FD3F4 0 210deg,#F2C14E 0 240deg,#FF805C 0 270deg,#C4DC79 0 300deg,#8FD3F4 0 330deg,#F2C14E 0 360deg);transition:transform 2.2s cubic-bezier(.2,.8,.2,1)}.ptr{position:absolute;top:-22px;left:46%;font-size:1.6em;color:var(--ink)}
+.fr{display:flex;align-items:center;gap:1vw;margin:.25em 0}.fr b{width:6.5em}.tr{flex:1;height:1em;background:#E3D3B0;border-radius:9px;overflow:hidden}.tr i{display:block;height:100%;background:var(--co)}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5vw;width:min(100%,1100px)}.menu .b{font-size:1.2em;padding:1em}
+.sub{font-size:1.3em;text-align:center}.sig{color:#B8860B;letter-spacing:.2em;font-size:.8em}
+footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.8vw;padding:.6vh 1vw;background:#fff;box-shadow:0 -2px 6px rgba(0,0,0,.12)}
+#teams{display:flex;gap:.8vw;flex-wrap:wrap}.tm{background:var(--card);border:2px solid #F1DDB0;color:var(--ink);border-radius:14px;padding:.1em .5em;display:flex;align-items:center;gap:.3em;font-size:.8em}.tm b{font-size:1.5em;min-width:1.6em;text-align:center;color:var(--co)}.tm .b{padding:.1em .6em}
+#tv{font-size:1.6em;color:var(--co);min-width:2.4em;text-align:center}select{font:inherit;border-radius:8px}
+#cf{position:fixed;inset:0;pointer-events:none;z-index:9}.sh{animation:shk .4s}@keyframes shk{25%{transform:translateX(-10px)}75%{transform:translateX(10px)}}
+body.fl{animation:fl .3s 3}@keyframes fl{50%{background-color:#C0392B}}
+.two .card:first-child{background:#EAF5C8}.sc{position:relative;height:9.5em;margin:.5em 4em}.bar{position:absolute;top:3.6em;left:0;right:0;height:1.8em;border-radius:99px;background:linear-gradient(90deg,#E74C3C,#FF805C 25%,#F2C14E 45%,#C4DC79 65%,#5CB85C 85%,#1E7F4F)}.pin{position:absolute;transform:translateX(var(--x));text-align:center;font-size:.85em;white-space:nowrap}.pin b{display:inline-block;padding:.15em .6em;border-radius:10px;color:#fff}.pin.up{top:0}.pin.up::after{content:"";display:block;width:4px;height:1.9em;background:var(--ink);margin:0 auto}.pin.dn{top:5.4em}.pin.dn::before{content:"";display:block;width:4px;height:1.9em;background:var(--ink);margin:0 auto}
+@media(max-width:700px){.two{grid-template-columns:1fr}.sc{margin:.5em 1em}}
+</style></head><body>
+<header><b class="logo">♔ SIR GEORGE</b><div id="pb"><i></i></div><nav><button class="b s" onclick="go(cur-1)">←</button><button class="b s" onclick="go(1)">☰</button><button class="b s" onclick="go(cur+1)">→</button><button class="b s" onclick="fs()">⛶</button></nav></header>
+<main id="st"></main>
+<footer><div id="teams"></div><div><select id="ts" onchange="tReset()"><option>30</option><option>60</option></select> <span id="tv">0:30</span><button class="b l" onclick="tStart()">▶</button><button class="b s" onclick="tPause()">⏸</button><button class="b s" onclick="tReset()">↺</button><button class="b" onclick="if(confirm('Reset all points?')){T.fill(0);drawScore()}">Reset points</button></div></footer>
+<canvas id="cf"></canvas>
+<script>
+const $=(s,e=document)=>e.querySelector(s),$$=(s,e=document)=>[...e.querySelectorAll(s)];
+const N=s=>s.toLowerCase().replace(/[’‘`]/g,"'").replace(/\bdoes not\b/g,"doesn't").replace(/\bdo not\b/g,"don't").replace(/\bi am\b/g,"i'm").replace(/\bis not\b/g,"isn't").replace(/\bare not\b/g,"aren't").replace(/\bam\b/g,"'m").replace(/\b(he|she|it) is\b/g,"$1's").replace(/\b(you|we|they) are\b/g,"$1're").replace(/\b(he|she|it)'s not\b/g,"$1 isn't").replace(/\b(you|we|they)'re not\b/g,"$1 aren't").replace(/[.?!,;]/g,"").replace(/\s+/g," ").trim();
+const ok=(v,a)=>[].concat(a).some(x=>N(x)==N(v));
+const shuf=a=>{a=[...a];for(let i=a.length-1;i>0;i--){let j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const m=(q,o,a,w)=>({q,o:o.split("|"),a,w});
+const cv=$("#cf"),cx=cv.getContext("2d");let P=[];
+function boom(n=60){for(let i=0;i<n;i++)P.push({x:innerWidth/2,y:innerHeight/2,vx:(Math.random()-.5)*18,vy:-Math.random()*15-4,c:["#FF805C","#C4DC79","#8FD3F4","#F2C14E"][i%4],r:Math.random()*6+3,l:90})}
+(function lp(){cv.width=innerWidth;cv.height=innerHeight;P=P.filter(p=>p.l>0);P.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.35;p.l--;cx.fillStyle=p.c;cx.fillRect(p.x,p.y,p.r,p.r*1.6)});requestAnimationFrame(lp)})();
+let AC;function beep(f=660,d=.15){try{AC=AC||new AudioContext();const o=AC.createOscillator(),g=AC.createGain();o.frequency.value=f;g.gain.value=.12;o.connect(g);g.connect(AC.destination);o.start();o.stop(AC.currentTime+d)}catch(e){}}
+function fx(r){beep(r?880:220,r?.15:.3);if(r)boom(40);else{const s=$("#st");s.classList.add("sh");setTimeout(()=>s.classList.remove("sh"),400)}}
+const T=[0,0,0,0];
+function drawScore(){$("#teams").innerHTML=T.map((v,i)=>`<div class="tm"><span>TEAM ${i+1}</span><b>${v}</b><button class="b s" onclick="pt(${i},-1)">−</button><button class="b l" onclick="pt(${i},1)">+</button></div>`).join("")}
+function pt(i,d){T[i]=Math.max(0,T[i]+d);drawScore();if(d>0)beep(880)}
+let tl=30,tm=null;const tShow=()=>$("#tv").textContent=Math.floor(tl/60)+":"+String(tl%60).padStart(2,"0");
+function tStart(){if(tm||tl<=0)return;tm=setInterval(()=>{tl--;tShow();if(tl<=0){clearInterval(tm);tm=null;beep(300,.8);document.body.classList.add("fl");setTimeout(()=>document.body.classList.remove("fl"),1000)}},1000)}
+function tPause(){clearInterval(tm);tm=null}
+function tReset(s){tPause();if(s)$("#ts").value=s;tl=+$("#ts").value;tShow()}
+const fs=()=>document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen();
+onkeydown=e=>{if(/INPUT|SELECT|TEXTAREA/.test(e.target.tagName))return;if(e.key=="ArrowRight")go(cur+1);if(e.key=="ArrowLeft")go(cur-1);if(e.key=="f")fs()};
+
+/* ENGINES */
+function mc(el,t,items,why){let i=0,s=0;const show=()=>{
+ if(i>=items.length){el.innerHTML=`<div class="card"><h2>${t}</h2><p class="big">⭐ Score: ${s} / ${items.length} ${s>=items.length*.8?"– Excellent!":"– Good effort!"}</p><button class="b" id="rs">Try again</button></div>`;$("#rs",el).onclick=()=>{i=0;s=0;show()};if(s>=items.length*.8)boom();return}
+ const q=items[i];el.innerHTML=`<div class="card"><h2>${t}<small>${i+1}/${items.length} · ⭐ ${s}</small></h2><p class="big">${q.q}</p><div class="opts">${q.o.map((o,k)=>`<button class="b o" data-k="${k}">${o}</button>`).join("")}</div><p class="fb"></p><button class="b l nx" hidden>Next →</button></div>`;
+ $$(".o",el).forEach(b=>b.onclick=()=>{const r=q.o[b.dataset.k]==q.a;$$(".o",el).forEach(x=>{x.disabled=true;if(q.o[x.dataset.k]==q.a)x.classList.add("good")});if(!r)b.classList.add("bad");if(r)s++;fx(r);$(".fb",el).innerHTML=r?"✅ CORRECT! 👍 Excellent!":"❌ Not quite! The answer is <b>"+q.a+"</b>."+(why&&q.w?"<br><i>"+q.w+"</i>":"");const n=$(".nx",el);n.hidden=false;n.onclick=()=>{i++;show()}})};show()}
+function txt(el,t,items){let s=0;const dn=new Set,sh=new Set;
+ el.innerHTML=`<div class="card"><h2>${t}<small id="sc">⭐ 0/${items.length}</small></h2>${items.map((it,i)=>`<div class="row" data-i="${i}"><span>${it.q.includes("__")?it.q.split("__").join("<input>"):it.q+' → <input class="w">'}</span><button class="b l ck">CHECK ANSWER</button><button class="b s sw">SHOW ANSWER</button><em class="fb"></em></div>`).join("")}</div>`;
+ $$(".row",el).forEach(r=>{const i=r.dataset.i,it=items[i],ins=$$("input",r),bl=it.q.includes("__"),fb=$(".fb",r),ans=bl?it.a.split("|"):[].concat(it.a);
+  ins.forEach(x=>x.onkeydown=e=>e.key=="Enter"&&$(".ck",r).click());
+  $(".ck",r).onclick=()=>{const g=bl?ins.every((x,k)=>ok(x.value,ans[k])):ok(ins[0].value,ans);fb.className="fb "+(g?"g":"x");fb.innerHTML=g?"✅ CORRECT! Excellent!":"❌ TRY AGAIN! "+(it.w||"");if(g&&!dn.has(i)&&!sh.has(i)){dn.add(i);s++;$("#sc",el).textContent=`⭐ ${s}/${items.length}`;if(s==items.length)boom()}fx(g)};
+  $(".sw",r).onclick=()=>{bl?ins.forEach((x,k)=>x.value=ans[k]):ins[0].value=ans[0];sh.add(i);fb.className="fb";fb.innerHTML="👀 Answer shown (no point)"}})}
+function ord(el,t,items){let s=0;el.innerHTML=`<div class="card"><h2>${t}<small id="sc">⭐ 0/${items.length}</small></h2></div>`;const c=$(".card",el);
+ items.forEach(it=>{const r=document.createElement("div");r.className="row";c.append(r);let pool=shuf(it.w.map((w,k)=>({w,k}))),bt=[],msg="",got=0,shown=0;
+  const draw=()=>{r.innerHTML=`<div class="bt">${bt.map(x=>`<button class="b l" data-k="${x.k}">${x.w}</button>`).join("")||"<small>Tap the words in order…</small>"}</div><div class="pl">${pool.map(x=>`<button class="b s" data-k="${x.k}">${x.w}</button>`).join("")}</div><button class="b l ck">CHECK ANSWER</button><button class="b s sw">SHOW ANSWER</button><button class="b rs">↺</button><em class="fb">${msg}</em>`;
+   $$(".pl .b",r).forEach(b=>b.onclick=()=>{const x=pool.find(p=>p.k==b.dataset.k);pool=pool.filter(p=>p!=x);bt.push(x);draw()});
+   $$(".bt .b",r).forEach(b=>b.onclick=()=>{const x=bt.find(p=>p.k==b.dataset.k);bt=bt.filter(p=>p!=x);pool.push(x);draw()});
+   $(".rs",r).onclick=()=>{pool=shuf([...pool,...bt]);bt=[];msg="";draw()};
+   $(".sw",r).onclick=()=>{shown=1;msg="👀 <b>"+[].concat(it.a)[0]+"</b>";draw()};
+   $(".ck",r).onclick=()=>{const g=ok(bt.map(x=>x.w).join(" "),it.a);msg=g?"✅ CORRECT! Excellent!":"❌ TRY AGAIN! "+(it.h||"");if(g&&!got&&!shown){got=1;s++;$("#sc",el).textContent=`⭐ ${s}/${items.length}`;if(s==items.length)boom()}draw();fx(g)}};draw()})}
+function qbox(r,q,p,ex=""){r.innerHTML=`<p class="big">${q.q}</p>${ex}<p class="big ans" hidden>💡 ${q.a}</p><div class="aw" hidden>Award ${p} pts to: ${T.map((_,k)=>`<button class="b l" onclick="pt(${k},${p})">TEAM ${k+1}</button>`).join("")}</div><button class="b rv">REVEAL ANSWER</button>`;
+ $(".rv",r).onclick=()=>{$(".ans",r).hidden=false;$(".aw",r).hidden=false;beep(660)}}
+function game(el,t,items,o={}){let i=0;const show=()=>{const q=items[i],p=q.p||o.p||10,last=i==items.length-1;
+ el.innerHTML=`<div class="card"><h2>${t}<small>${i+1}/${items.length}${o.boss?" · 🏆 "+p+" pts":""}</small></h2><div class="qb"></div><div><button class="b s pv">←</button><button class="b s nx">${last&&o.end?"FINISH 🏁":"→"}</button></div></div>`;
+ const qb=$(".qb",el);let ex="";
+ if(o.mode=="cw")ex=`<div class="opts"><button class="b l o" data-v="1">✔ CORRECT</button><button class="b o" data-v="0">✘ WRONG</button></div>`;
+ if(o.mode=="mc")ex=`<div class="opts">${q.o.map(x=>`<button class="b o" data-v="${x}">${x}</button>`).join("")}</div>`;
+ qbox(qb,q,p,ex);if(o.secs)tReset(o.secs);
+ $$(".o",qb).forEach(b=>b.onclick=()=>{$(".rv",qb).click();const r=o.mode=="cw"?(+b.dataset.v==(q.c?1:0)):b.dataset.v==q.a;$$(".o",qb).forEach(x=>{x.disabled=true;if(o.mode=="mc"&&x.dataset.v==q.a)x.classList.add("good")});b.classList.add(r?"good":"bad");fx(r)});
+ $(".pv",el).onclick=()=>{i=Math.max(0,i-1);show()};$(".nx",el).onclick=()=>{if(!last){i++;show()}else if(o.end)go(FIN)}};show()}
+function roul(el){let bag=[],rot=0;el.innerHTML=`<div class="card" style="text-align:center"><h2>GRAMMAR ROULETTE</h2><div class="wrap"><div class="wheel"></div><i class="ptr">▼</i></div><button class="b sp" style="font-size:1.3em">SPIN!</button><div class="rq" style="text-align:left"></div></div>`;
+ $(".sp",el).onclick=()=>{if(!bag.length)bag=shuf(RO);const q=bag.pop();rot+=1080+(Math.random()*360|0);$(".wheel",el).style.transform=`rotate(${rot}deg)`;$(".rq",el).innerHTML="";beep(500,.1);setTimeout(()=>{qbox($(".rq",el),{q:"🎯 <u>"+q.t+"</u> — "+q.q,a:q.a},10);boom(20)},2300)}}
+
+/* DATA */
+const pr=(a,t,w)=>a.map(x=>({q:t+x[0],a:x[1],w}));
+const od=(a,h)=>a.map(x=>({w:x[0].split("|"),a:x[1],h}));
+const WU=[m("She ___ TV now.","watches|is watching|watching","is watching"),m("They ___ football at the moment.","are playing|plays|playing","are playing"),m("I ___ listening to music.","am|is|are","am"),m("___ he sleeping?","Is|Does|Are","Is"),m("We aren’t ___ lunch.","have|having|has","having")];
+const UT=[m("Look! It’s raining.","Now|Temporary|Plan","Now","Look! = happening now."),m("I’m studying French this year.","Now|Temporary|Plan","Temporary","This year = for a short period."),m("We’re going to the cinema tomorrow.","Now|Temporary|Plan","Plan","A fixed plan for the future."),m("Be quiet! The baby is sleeping.","Now|Temporary|Plan","Now","It is happening now."),m("She’s working in a café this summer.","Now|Temporary|Plan","Temporary","This summer = temporary.")];
+const GA=pr([["He __ (play) football.","is playing"],["We __ (read) a book.","are reading"],["I __ (write) an email.","am writing"],["She __ (listen) to music.","is listening"],["They __ (eat) lunch.","are eating"]],"","am / is / are + verb-ing.");
+const SP=[m("play → ?","playing|plaing|playying","playing"),m("make → ?","makeing|making|makking","making","-e: drop the e."),m("run → ?","runing|running|runeing","running","Short verb: double the n."),m("swim → ?","swiming|swimeing|swimming","swimming","Short verb: double the m."),m("dance → ?","dancing|danceing|dancring","dancing","-e: drop the e.")];
+const GN=pr([["She is dancing.","She isn’t dancing."],["They are singing.","They aren’t singing."],["I am sleeping.","I’m not sleeping."],["He is running.","He isn’t running."],["We are working.","We aren’t working."]],"Make it negative: ","isn’t / aren’t / ’m not + verb-ing.");
+const NT=[m("She ___ watching TV.","isn’t|aren’t|don’t","isn’t","She → isn’t."),m("They ___ sleeping.","aren’t|isn’t|am not","aren’t","They → aren’t."),m("I ___ eating.","’m not|isn’t|aren’t","’m not","I → am not (I’m not)."),m("Which is correct?","He isn’t playing.|He isn’t plays.|He doesn’t playing.","He isn’t playing.","isn’t + verb-ing."),m("We ___ working today.","aren’t|isn’t|don’t","aren’t")];
+const GI=od([["is|she|cooking|dinner","Is she cooking dinner?"],["are|they|playing|football","Are they playing football?"],["you|are|doing|what","What are you doing?"],["is|raining|it","Is it raining?"],["are|you|reading|a book","Are you reading a book?"]],"Am / is / are goes first.");
+const QT=[m("___ she sleeping?","Is|Are|Does","Is","She → Is."),m("Which is correct?","Are they play?|Are they playing?|Is they playing?","Are they playing?","Are + they + verb-ing."),m("Are you reading? Yes, ___","I am|I do|I’m reading","I am"),m("___ they running?","Are|Is|Do","Are"),m("Is he cooking? No, ___","he isn’t|he doesn’t|he aren’t","he isn’t")];
+const LK=[m("🏊 He ___ .","is swimming|swims|is swiming","is swimming"),m("📖 She ___ a book.","is reading|reads|reading","is reading"),m("🌧️ It ___ .","is raining|are raining|rains","is raining"),m("🎤 They ___ .","are singing|is singing|sings","are singing"),m("🍳 My dad ___ dinner.","is cooking|cooks|cooking","is cooking")];
+const A1=[m("She ___ a letter now.","writes|is writing|write","is writing","Now = am / is / are + verb-ing."),m("They ___ in the garden.","are playing|is playing|playing","are playing","They → are."),m("I ___ my homework at the moment.","am doing|is doing|do","am doing","I → am."),m("___ your brother watching TV?","Are|Is|Do","Is","Your brother = he → Is."),m("We ___ lunch.","aren’t having|isn’t having|don’t having","aren’t having","We → aren’t."),m("The dog ___ in the park.","is running|is runing|are running","is running","run → running."),m("He ___ a photo.","is taking|is takeing|is take","is taking","take → taking."),m("___ they listening to music?","Are|Is|Do","Are"),m("She ___ her room now.","isn’t cleaning|doesn’t cleaning|not cleaning","isn’t cleaning"),m("What ___ you doing?","are|is|do","are")];
+const A2=[{q:"Look! The cat __ (sleep) on the sofa.",a:"is sleeping"},{q:"We __ (not / watch) TV now.",a:"aren’t watching"},{q:"__ you __ (read) a book?",a:"Are|reading"},{q:"Tom __ (play) tennis at the moment.",a:"is playing"},{q:"I __ (write) an email.",a:"am writing"},{q:"My parents __ (cook) dinner.",a:"are cooking"},{q:"She __ (not / run) in the park.",a:"isn’t running",w:"run → running."},{q:"__ he __ (swim)?",a:"Is|swimming",w:"swim → swimming."},{q:"They __ (dance) at the party.",a:"are dancing",w:"dance → dancing."},{q:"I __ (not / listen) to music.",a:"’m not listening"}];
+const A3=pr([["She is reading a book.","She isn’t reading a book."],["They are playing football.","They aren’t playing football."],["I am watching TV.","I’m not watching TV."],["He is eating lunch.","He isn’t eating lunch."],["We are dancing.","We aren’t dancing."]],"Make it negative: ","isn’t / aren’t / ’m not + verb-ing.");
+const A4=pr([["You are reading.","Are you reading?"],["She is sleeping.","Is she sleeping?"],["They are playing tennis.","Are they playing tennis?"],["He is cooking dinner.","Is he cooking dinner?"],["You are listening to music.","Are you listening to music?"]],"Make a question: ","Am / is / are goes first.");
+const A5=od([["is|reading|she|a book",["She is reading a book.","She’s reading a book."]],["playing|they|aren’t|football","They aren’t playing football."],["what|are|you|doing","What are you doing?"],["are|watching|you|TV","Are you watching TV?"],["my|dad|isn’t|sleeping","My dad isn’t sleeping."]],"Remember the word order.");
+const A6=pr([["She is play tennis.","She is playing tennis."],["They is watching TV.","They are watching TV."],["He isn’t eat lunch.","He isn’t eating lunch."],["Are she reading?","Is she reading?"],["I’m runing in the park.","I’m running in the park."]],"Find the mistake and correct it: ","Check am/is/are and the -ing spelling.");
+const RO=[["Make it negative","She is reading.","She isn’t reading."],["-ing form","run → ?","running"],["Make a question","You are sleeping.","Are you sleeping?"],["Short answer","Is he playing? ✔","Yes, he is."],["Correct it","He is play football.","He is playing football."],["Mime it!","Act out an action; the class says what you are doing.","You are + verb-ing…"],["-ing form","make → ?","making"],["Make it negative","They are watching TV.","They aren’t watching TV."],["Make a question","He is cooking.","Is he cooking?"],["Short answer","Are they dancing? ✘","No, they aren’t."],["Correct it","Are she reading?","Is she reading?"],["Word order","what / doing / are / you","What are you doing?"],["-ing form","swim → ?","swimming"]].map(x=>({t:x[0],q:x[1],a:x[2]}));
+const G2=[["Make it negative: He is playing the guitar.","He isn’t playing the guitar."],["Make a question: They are watching TV.","Are they watching TV?"],["My dad ___ (work) now.","is working"],["She ___ (not / eat) lunch.","isn’t eating"],["Make a question: She is going to school.","Is she going to school?"],["We ___ (study) English.","are studying"],["Correct it: He are playing.","He is playing."],["Make it negative: My parents are working.","My parents aren’t working."],["___ your sister ___ (sing)?","Is … singing"],["Say what you are doing right now.","e.g. I’m looking at the screen."]].map(x=>({q:x[0],a:x[1]}));
+const G3=[["She is playing tennis now.",1,"Correct!"],["He are watching TV.",0,"Wrong → He is watching TV."],["Are they listening to music?",1,"Correct!"],["I’m runing in the park.",0,"Wrong → I’m running in the park."],["We aren’t working today.",1,"Correct!"],["Is she reading?",1,"Correct!"],["They is eating lunch.",0,"Wrong → They are eating lunch."],["He isn’t sleeping.",1,"Correct!"],["Are you play football?",0,"Wrong → Are you playing football?"],["She’s makeing a cake.",0,"Wrong → She’s making a cake."]].map(x=>({q:"“"+x[0]+"”",c:x[1],a:x[2]}));
+const G4=[m("He ___ a book.","is reading|reads|are reading|reading","is reading"),m("They ___ now.","aren’t sleeping|isn’t sleeping|don’t sleeping|not sleeping","aren’t sleeping"),m("___ she cooking?","Is|Are|Does|Do","Is"),m("-ing form of “swim”:","swiming|swimming|swimeing|swimmeing","swimming"),m("-ing form of “dance”:","dancing|danceing|dancig|dannsing","dancing"),m("I ___ TV.","am watching|is watching|are watching|watching","am watching"),m("Which is correct?","Are you listening?|Is you listening?|Are you listen?|You are listening?","Are you listening?"),m("Are they playing? Yes, ___","they are|they do|they play|they is","they are"),m("We ___ lunch.","are having|is having|has having|having","are having"),m("She isn’t ___ .","playing|plays|play|is play","playing")];
+const G5=[["-ing form: write → ?","writing"],["She ___ (read) a book.","is reading"],["Make it negative: He is eating.","He isn’t eating."],["Make a question: They are playing.","Are they playing?"],["Is your mum cooking? (✔) Short answer:","Yes, she is."],["Make a ‘What’ question: you / do","What are you doing?"],["Correct it: My sister are dancing.","My sister is dancing."],["Correct it: Is he runing?","Is he running?"],["Are you sleeping? (✘) Short answer:","No, I’m not."],["Correct it: She isn’t listen to music.","She isn’t listening to music."]].map((x,i)=>({q:x[0],a:x[1],p:10*(i+1)}));
+/* SLIDES */
+const H=h=>v=>v.innerHTML=h,FIN=27;
+const S=[
+{r:H(`<p class="sig">CREATED BY SIR GEORGE</p><h1 style="font-size:3.2em">PRESENT CONTINUOUS<br>CHALLENGE!</h1><p style="font-size:3em">🏃 📖 🎵 🍳 🏊</p><p class="sub">What are you doing right now?</p><button class="b" style="font-size:1.4em" onclick="go(1)">START ▶</button>`)},
+{r:H(`<h1>MENU</h1><div class="menu"><button class="b l" onclick="go(2)">🔥 Warm-up</button><button class="b s" onclick="go(3)">📘 Grammar Zone</button><button class="b" onclick="go(16)">✏️ Practice Zone</button><button class="b l" onclick="go(22)">🎮 Team Games</button><button class="b s" onclick="go(27)">🏆 Final</button></div><p>Tip: use ← → keys, F for full screen.</p>`)},
+{r:v=>mc(v,"WARM-UP",WU,false)},
+{r:H(`<h1>WHEN DO WE USE THE PRESENT CONTINUOUS?</h1><div class="two"><div class="card" style="background:#FFD9CC"><p style="font-size:2em">⏱️</p><b>RIGHT NOW</b><br>Look! It’s raining.<br>I’m reading a book.</div><div class="card" style="background:#CFEBFA"><p style="font-size:2em">📅</p><b>TEMPORARY ACTIONS</b><br>I’m studying French this year.<br>She’s working in a café this summer.</div><div class="card" style="background:#FFEFB0"><p style="font-size:2em">🖼️</p><b>DESCRIBING A PICTURE</b><br>A boy is running.<br>Two girls are singing.</div><div class="card" style="background:#EAF5C8"><p style="font-size:2em">🎟️</p><b>FUTURE PLANS</b><br>We’re going to the cinema tomorrow.</div></div><div class="card"><b>CLUE WORDS:</b> <u>now</u> · <u>right now</u> · <u>at the moment</u> · <u>today</u> · <u>this week</u> · <u>Look!</u> · <u>Listen!</u></div>`)},
+{r:v=>mc(v,"WHICH USE IS IT?",UT,true)},
+{r:H(`<h1>A · AFFIRMATIVE (+)</h1><div class="two"><div class="card"><b>I</b><p class="f">AM + VERB-ING</p>⚽ I’m playing football.</div><div class="card hot"><b>HE / SHE / IT</b><p class="f">IS + VERB-ING</p>📺 She’s watching TV.<br>🐶 The dog is running.</div></div><div class="card" style="background:#CFEBFA"><b>YOU / WE / THEY</b> → <u>ARE</u> + VERB-ING<br>🎵 We’re listening to music.<br>🏠 They’re playing outside.</div>`)},
+{r:v=>txt(v,"COMPLETE THE SENTENCES",GA)},
+{r:H(`<h1>VERB + -ING</h1><div class="two"><div class="card" style="background:#FFD9CC"><b>Normally: + ING</b><br>play → play<u>ing</u><br>read → read<u>ing</u></div><div class="card" style="background:#CFEBFA"><b>-E: drop the E</b><br>make → mak<u>ing</u><br>dance → danc<u>ing</u></div><div class="card" style="background:#FFEFB0"><b>Short verb: double the last letter</b><br>run → run<u>ning</u><br>swim → swim<u>ming</u></div><div class="card" style="background:#EAF5C8"><b>Remember!</b><br>AM / IS / ARE + verb-ing<br>Never forget the verb TO BE!</div></div>`)},
+{r:v=>mc(v,"QUICK TEST · -ING FORMS",SP,true)},
+{r:H(`<h1>B · NEGATIVE (−)</h1><div class="two"><div class="card"><b>I</b><p class="f">AM NOT + VERB-ING</p>🐟 I’m not eating fish.</div><div class="card hot"><b>HE / SHE / IT</b><p class="f">ISN’T + VERB-ING</p>📺 He isn’t watching TV.</div></div><div class="card" style="background:#CFEBFA"><b>YOU / WE / THEY</b> → <u>AREN’T</u> + VERB-ING<br>🎾 They aren’t playing tennis.</div>`)},
+{r:v=>txt(v,"MAKE IT NEGATIVE",GN)},
+{r:v=>mc(v,"QUICK TEST · NEGATIVES",NT,true)},
+{r:H(`<h1>C · QUESTIONS (?)</h1><div class="two"><div class="card"><b>AM / IS / ARE + subject + VERB-ING?</b><p class="f">Is she reading?</p>🎵 Are you listening?<br>Yes, I am. / No, I’m not.<br>Yes, she is. / No, she isn’t.</div><div class="card hot"><b>WH- QUESTIONS</b><p class="f">What are you doing?</p>🏠 I’m doing my homework.<br>🚌 Where is he going?</div></div>`)},
+{r:v=>ord(v,"PUT THE WORDS IN ORDER",GI)},
+{r:v=>mc(v,"QUICK TEST · QUESTIONS",QT,true)},
+{r:v=>mc(v,"LOOK AND CHOOSE!",LK,true)},
+{r:v=>mc(v,"ACTIVITY 1 · CHOOSE THE CORRECT ANSWER",A1,true)},
+{r:v=>txt(v,"ACTIVITY 2 · COMPLETE THE SENTENCE",A2)},
+{r:v=>txt(v,"ACTIVITY 3 · MAKE IT NEGATIVE",A3)},
+{r:v=>txt(v,"ACTIVITY 4 · MAKE QUESTIONS",A4)},
+{r:v=>ord(v,"ACTIVITY 5 · PUT THE WORDS IN ORDER",A5)},
+{r:v=>txt(v,"ACTIVITY 6 · FIND THE MISTAKE",A6)},
+{r:roul},
+{r:v=>game(v,"30-SECOND CHALLENGE",G2,{secs:30})},
+{r:v=>game(v,"CORRECT OR WRONG?",G3,{mode:"cw"})},
+{r:v=>game(v,"WHO IS THE FASTEST?",G4,{mode:"mc"})},
+{r:v=>game(v,"THE FINAL BOSS",G5,{boss:1,end:1})},
+{live:1,r:v=>{const r=T.map((s,i)=>({s,i})).sort((a,b)=>b.s-a.s),w=r.filter(x=>x.s==r[0].s).map(x=>"TEAM "+(x.i+1)).join(" & ");v.innerHTML=`<h1 style="font-size:2.6em">PRESENT CONTINUOUS MASTERS! 🏆</h1><div class="card"><p class="big">🥇 Winner: <u>${w}</u> — Congratulations! Sir George is proud of you!</p>${r.map((x,k)=>`<p class="big">${k+1}. TEAM ${x.i+1} — <b>${x.s}</b> pts</p>`).join("")}<p>Great work, everyone: keep practising and keep speaking English!</p></div><div><button class="b s" onclick="go(1)">☰ Menu</button><button class="b" onclick="if(confirm('Restart everything?'))location.reload()">↺ Restart</button></div><p class="sig">CREATED BY SIR GEORGE</p>`}}
+];
+let cur=0;const views={};
+function go(i){i=Math.max(0,Math.min(S.length-1,i));cur=i;const st=$("#st");$$(".slide",st).forEach(x=>x.classList.remove("on"));let v=views[i];
+ if(!v||S[i].live){if(v)v.remove();v=views[i]=document.createElement("div");v.className="slide";st.append(v);S[i].r(v)}
+ v.classList.add("on");$("#pb i").style.width=(i/(S.length-1)*100)+"%";tPause();tReset();st.scrollTop=0;if(S[i].live)boom(120)}
+drawScore();go(0);
+</script></body></html>
